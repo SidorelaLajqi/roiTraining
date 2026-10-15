@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>STUDIO<span>.</span></h2>
+        <a href="#about">About</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact ↗</a>
+    </nav>
+
+    <main id="about">
+        <p class="tag">✦ INDEPENDENT CREATIVE STUDIO</p>
+
+        <h1>We make<br>ideas <span>happen.</span></h1>
+
+        <p class="description">
+            We turn creative thinking into beautiful digital experiences.
+            Simple ideas. Bold designs. Meaningful results.
+        </p>
+
+        <a href="#work" class="button">Explore Our Work ↗</a>
+
+        <div class="circle">CREATIVITY<br>WITHOUT LIMITS ✳</div>
+    </main>
+
+    <section id="work">
+        <p class="tag">WHAT WE DO</p>
+        <h2>Ideas made <span>real.</span></h2>
+
+        <div class="cards">
+            <div class="card">
+                <p>01 / DESIGN</p>
+                <h3>Web Design ↗</h3>
+                <p>Clean and modern digital experiences.</p>
+            </div>
+
+            <div class="card">
+                <p>02 / BRANDING</p>
+                <h3>Visual Identity ↗</h3>
+                <p>Unique styles that stand out.</p>
+            </div>
+
+            <div class="card">
+                <p>03 / CREATIVE</p>
+                <h3>New Ideas ↗</h3>
+                <p>Creative thinking with a purpose.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <p class="tag">HAVE AN IDEA?</p>
+        <h2>Let's create<br><span>something great.</span></h2>
+        <button onclick="contactMe()">Let's Connect ↗</button>
+        <p id="message"></p>
+    </section>
+
+    <footer>STUDIO. © 2026 — MADE WITH CREATIVITY</footer>
+
+    <script>
+        function contactMe() {
+            document.getElementById("message").innerHTML =
+                "Thanks for stopping by! Let's make something amazing. ✨";
+        }
+    </script>
+
+</body>
+</html>
