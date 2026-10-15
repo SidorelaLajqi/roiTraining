@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fbf7f3;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: #1f3a2e;
+  color: white;
+  z-index: 10;
+}
+
+nav a {
+  margin-left: 25px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f0b6c0;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 6%;
+  color: white;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('images/hero.jpg') center / cover,
+    #3b5a4a;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  animation: slideUp 1s ease;
+}
+
+.hero p {
+  margin: 15px 0 30px;
+  animation: slideUp 1.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 12px 32px;
+  background: #c4566b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #a63f54;
+  transform: translateY(-3px);
+}
+
+.section {
+  padding: 100px 6%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1f3a2e;
+}
+
+.pink {
+  background: #f6e1e2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-top: 15px;
+}
+
+.photo {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.card:hover .photo {
+  transform: scale(1.1);
+}
+
+.b1 {
+  background-image: url('images/b1.jpg');
+  background-color: #b23a48;
+}
+
+.b2 {
+  background-image: url('images/b2.jpg');
+  background-color: #e8a33d;
+}
+
+.b3 {
+  background-image: url('images/b3.jpg');
+  background-color: #e7a7b3;
+}
+
+.occ {
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  font-size: 1.6rem;
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s;
+}
+
+.occ::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+  transition: 0.4s;
+}
+
+.occ span {
+  position: relative;
+}
+
+.occ:hover {
+  transform: scale(1.05);
+}
+
+.occ:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(196, 86, 107, 0.9),
+    transparent
+  );
+}
+
+.o1 {
+  background-image: url('images/wedding.jpg');
+  background-color: #8f7a83;
+}
+
+.o2 {
+  background-image: url('images/birthday.jpg');
+  background-color: #d98a3d;
+}
+
+.o3 {
+  background-image: url('images/anniversary.jpg');
+  background-color: #a8485a;
+}
+
+.o4 {
+  background-image: url('images/mother.jpg');
+  background-color: #5f8a6e;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c4566b;
+}
+
+footer {
+  background: #1f3a2e;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #f0b6c0;
+  transition: color 1s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  nav a {
+    margin-left: 12px;
+  }
+}
